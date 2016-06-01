@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ind_cat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.android.activitymanagement.MainActivity"
+        tools:showIn="@layout/individual_category">
+
+        <TextView
+
+            android:id="@+id/main_task_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#AED581"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/hours_spent_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Hours spent :  "
+                android:textColor="#212121"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/hours_count_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/hours_spent_textview"
+                android:textColor="#212121"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/total_hours_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hours_spent_textview"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Total hours  :  "
+                android:textColor="#212121"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/total_hours_count_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/total_hours_textview"
+                android:textColor="#212121"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tasks_list_textview"
+            style="@style/textStyle"
+            android:text="Would you like to add the list of " />
+
+        <RadioGroup
+            style="@style/textStyle"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tasks_yes_radioBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioBtnClick"
+                android:text="yes" />
+
+            <RadioButton
+                android:id="@+id/tasks_no_radioBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="onRadioBtnClick"
+                android:text="no" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/numOfTasks_editText"
+            style="@style/textStyle"
+            android:inputType="number"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/addTasks_button"
+            style="@style/buttonStyle"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="onAddTasksBtnClick"
+            android:text="Add"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</ScrollView>

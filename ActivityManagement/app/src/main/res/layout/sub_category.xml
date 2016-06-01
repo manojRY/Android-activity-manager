@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/sub_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.android.activitymanagement.MainActivity"
+        tools:showIn="@layout/sub_category">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#AED581">
+
+            <TextView
+                android:id="@+id/sub_category_text_view"
+                style="@style/headingStyle" />
+
+            <Button
+                android:id="@+id/plus_button"
+                style="@style/buttonStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:onClick="onSubCatPlusClick"
+                android:text="+" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/constraints_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/new_subcategory_edittext"
+                style="@style/textStyle"
+                android:hint="New Subcategory"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/new_subcathours_edittext"
+                style="@style/textStyle"
+                android:hint="Total Hours"
+                android:inputType="number" />
+
+            <RadioGroup
+                android:id="@+id/frequency_radiogrp"
+                style="@style/textStyle"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/weekly_radiobtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Weekly"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/bi_weekly_radiobtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bi-Weekly"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/start_date_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Start Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/end_date_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="End Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/timing_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Timing"
+                    android:inputType="time" />
+            </LinearLayout>
+
+            <TextView
+
+                android:text="Any prerequisite for the exam ?"
+                style="@style/textStyle"/>
+
+            <RadioGroup
+                android:id="@+id/prerequisite_radiogrp"
+                android:layout_width="match_parent"
+                style="@style/textStyle"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/yes_radiobtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onRadioBtnClick"
+                    android:text="yes"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/no_radiobtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:onClick="onRadioBtnClick"
+                    android:text="no"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/percentage_textview"
+                style="@style/textStyle"
+                android:text="What percentage of the task must be completed ?"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/percentage_edittext"
+                style="@style/textStyle"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/add_subcat_button"
+                android:text="add"
+                android:onClick="addNewSubCategory"
+                android:layout_marginTop="16dp"
+                style="@style/buttonStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
