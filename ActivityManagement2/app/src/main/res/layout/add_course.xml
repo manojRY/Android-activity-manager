@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/new_course_edit_text"
+        style="@style/textStyle"
+        android:hint="New Course"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/total_hours_edit_text"
+        style="@style/textStyle"
+        android:hint="Total Hours"
+        android:inputType="number" />
+
+
+</LinearLayout>
